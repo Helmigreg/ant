@@ -1,0 +1,5 @@
+- Name: BrokenTest3
+  Source: brclient
+  Destination: brserver
+  Points: 1
+  Allow: true

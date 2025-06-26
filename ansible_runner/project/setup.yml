@@ -1,0 +1,14 @@
+---
+- name: Setup the nftable rulesets
+  hosts: setup
+  gather_facts: no
+  
+  tasks: 
+    - name: Upload script
+      ansible.builtin.copy: 
+        src: "{{ nft_file }}"
+        dest: "/home/{{ ansible_user }}/{{ filename }}"
+    - name: Load ruleset
+      ansible.builtin.command:
+        cmd: "sudo nft -f /home/{{ ansible_user }}/{{ filename }}"
+...

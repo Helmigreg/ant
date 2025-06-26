@@ -1,0 +1,8 @@
+- Name: BrokenTest1
+  Destination: brserver
+  Proto: tcp
+  D_port:
+  - 80
+  - 443
+  Points: 1
+  Allow: true

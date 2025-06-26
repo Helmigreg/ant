@@ -1,0 +1,58 @@
+flush ruleset
+
+define HQWANIF = enp0s3
+define HQLANIF = enp0s8
+define HQDMZIF = enp0s9
+define MGMTIF = enp0s10
+
+define HQLAN = 172.16.0.0/24
+define HQLAN6 = 2001:db8::/64
+define HQDMZ = 172.16.1.0/24
+define HQDMZ6 = 2001:db8:1::/64
+define INET = 203.0.113.0/24
+define INET6 = 2001:db8:ffff:1::/64
+define HQFW = {172.16.0.1, 172.16.1.1, 192.0.2.1}
+
+table inet filter {
+
+	ct helper ftp-standard {
+		type "ftp" protocol tcp;
+	}
+
+	chain input {
+		type filter hook input priority filter; policy drop;
+		ct states established counter accept #error here
+		#allow loopback
+		iifname lo accept
+
+		#reject all other connection attempts
+		ct state new log counter reject
+		reject
+	}
+
+	chain output {
+		type filter hook output priority filter; policy drop;
+		ct state established counter accept
+		#allow loopback
+		oifname lo accept
+
+		#reject all other connection attempts
+		ct state new log counter reject
+		reject
+	}
+
+}
+
+table ip nat {
+	chain prerouting {
+		type nat hook prerouting priority dstnat;
+		#destination nat for internet http, https and ftp to hqsrv
+		iifname $HQWANIF ip saddr $INET tcp dport {http, https, ftp, 1024-65535} log counter dnat to 172.16.1.10
+	}
+	chain postrouting {
+		type nat hook postrouting priority srcnat;
+		#source nat for hqlan and hqdmz to internet
+		iifname $HQLANIF oifname $HQWANIF ip saddr $HQLAN log counter snat to 192.0.2.1
+		iifname $HQDMZIF oifname $HQWANIF ip saddr $HQDMZ log counter snat to 192.0.2.1
+	}
+}

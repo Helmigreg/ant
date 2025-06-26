@@ -1,0 +1,18 @@
+---
+- name: automated UDP-test using inventory
+  hosts: udp
+  gather_facts: no
+
+  tasks:
+    - name: Run dig UDP test on {{ inventory_hostname }}
+      ansible.builtin.command:
+        cmd: "dig @{{ item }} port=53"
+      register: dig_udp_result
+      vars:
+        ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+      ignore_errors: yes
+      loop: "{{ destination }}"
+    - name: Print result
+      debug:
+        var: dig_udp_result.results
+... 

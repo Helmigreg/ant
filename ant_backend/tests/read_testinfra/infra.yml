@@ -1,0 +1,13 @@
+---
+Networks:
+    test_network:
+        Netmask: 24
+        Netaddress: 192.168.0.0
+Machines:
+    test_machine:
+        IP:
+            - 192.168.1.1
+        Management: 10.0.0.1
+        User: toor
+        Password: toor123
+...

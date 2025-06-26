@@ -1,0 +1,18 @@
+---
+- name: automated TCP-test using inventory
+  hosts: tcp
+  gather_facts: no
+  
+  tasks:
+    - name: Run netcat TCP test on {{ inventory_hostname }}
+      ansible.builtin.command:
+        cmd: "nc -zv -w5 {{ item[0] }} {{ item[1] }}"
+      register: nc_tcp_result
+      vars:
+        ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+      ignore_errors: yes
+      loop: "{{ destination | product(dport) | list }}"
+    - name: Print result
+      debug:
+        var: nc_tcp_result.results
+... 

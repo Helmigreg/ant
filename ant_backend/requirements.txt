@@ -1,0 +1,3 @@
+nftables @ git+https://salsa.debian.org/pkg-netfilter-team/pkg-nftables@4dd66909609214e54230572ea717edb4984bb46a#subdirectory=py
+PyYAML==6.0.2
+ansible-runner==2.4.1

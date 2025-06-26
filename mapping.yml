@@ -1,0 +1,10 @@
+---
+tcp:
+  destination: destination
+  dport: d_port
+udp:
+  destination: destination
+  dport: d_port
+icmp:
+  destination: destination
+...

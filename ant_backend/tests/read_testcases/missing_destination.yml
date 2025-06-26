@@ -1,0 +1,6 @@
+- Name: BrokenTest2
+  Source: brclient
+  Proto: icmpv4
+  D_port: 22
+  Points: 1
+  Allow: true

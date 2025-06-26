@@ -1,0 +1,16 @@
+---
+- name: Render a ping command and execute it
+  hosts: icmp
+  #remote_user: ansible_host
+  gather_facts: no
+  
+  tasks: 
+    - name: Run the ping script
+      ansible.builtin.shell: 
+        cmd: "ping -c 4 {{ item }}"
+      register: ping_result
+      loop: "{{ destination }}"
+    - name: Print result
+      debug:
+        var: ping_result.results
+...

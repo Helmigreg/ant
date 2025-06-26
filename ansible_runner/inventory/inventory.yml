@@ -1,0 +1,340 @@
+icmp:
+  hosts:
+    hqclient-Aufgabe_4.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.1.1
+      - 172.16.0.1
+      - 192.0.2.1
+    hqclient-Aufgabe_5.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+    hqclient-Aufgabe_6.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.1.10
+      - 172.16.1.1
+    hqclientv6-Aufgabe_4.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0001:0000:0000:0000:0000:0001
+      - 2001:0db8:0000:0000:0000:0000:0000:0001
+      - 2001:0db8:ffff:0000:0000:0000:0000:0001
+    hqclientv6-Aufgabe_5.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:ffff:0001:0000:0000:0000:0001
+    hqclientv6-Aufgabe_6.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0001:0000:0000:0000:0000:0010
+      - 2001:0db8:0001:0000:0000:0000:0000:0001
+    hqfw-Aufgabe_22.1:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.0.10
+    hqfw-Aufgabe_23.1:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.1.10
+      - 172.16.1.1
+    hqfw-Aufgabe_24.1:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+    hqfwv6-Aufgabe_22.2:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0000:0000:0000:0000:0000:0010
+    hqfwv6-Aufgabe_23.2:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0001:0000:0000:0000:0000:0010
+      - 2001:0db8:0001:0000:0000:0000:0000:0001
+    hqfwv6-Aufgabe_24.2:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:ffff:0001:0000:0000:0000:0001
+    hqsrv-Aufgabe_10.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.1.1
+      - 172.16.0.1
+      - 192.0.2.1
+    hqsrv-Aufgabe_11.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+    hqsrv-Aufgabe_12.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.0.10
+    hqsrvv6-Aufgabe_10.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0001:0000:0000:0000:0000:0001
+      - 2001:0db8:0000:0000:0000:0000:0000:0001
+      - 2001:0db8:ffff:0000:0000:0000:0000:0001
+    hqsrvv6-Aufgabe_11.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:ffff:0001:0000:0000:0000:0001
+    hqsrvv6-Aufgabe_12.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0000:0000:0000:0000:0000:0010
+    inetsys-Aufgabe_16:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.1.1
+      - 172.16.0.1
+      - 192.0.2.1
+    inetsysv6-Aufgabe_17:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0000:0000:0000:0000:0000:0010
+    inetsysv6-Aufgabe_18:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0001:0000:0000:0000:0000:0010
+      - 2001:0db8:0001:0000:0000:0000:0000:0001
+    inetsysv6-Aufgabe_19:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0001:0000:0000:0000:0000:0001
+      - 2001:0db8:0000:0000:0000:0000:0000:0001
+      - 2001:0db8:ffff:0000:0000:0000:0000:0001
+tcp:
+  hosts:
+    hqclient-Aufgabe_1.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+      dport:
+      - 80
+      - 443
+    hqclient-Aufgabe_2.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.1.10
+      dport:
+      - 80
+      - 443
+    hqclient-Aufgabe_3.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+      dport:
+      - 53
+    hqclient-Aufgabe_7.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.1.1
+      - 172.16.0.1
+      - 192.0.2.1
+      dport:
+      - 22
+    hqclientv6-Aufgabe_1.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:ffff:0001:0000:0000:0000:0001
+      dport:
+      - 80
+      - 443
+    hqclientv6-Aufgabe_2.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0001:0000:0000:0000:0000:0010
+      dport:
+      - 80
+      - 443
+    hqclientv6-Aufgabe_7.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0001:0000:0000:0000:0000:0001
+      - 2001:0db8:0000:0000:0000:0000:0000:0001
+      - 2001:0db8:ffff:0000:0000:0000:0000:0001
+      dport:
+      - 22
+    hqfw-Aufgabe_20.2:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+      dport:
+      - 53
+    hqfw-Aufgabe_21:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+      dport:
+      - 80
+      - 443
+    hqsrv-Aufgabe_8.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+      dport:
+      - 80
+      - 443
+    hqsrv-Aufgabe_9.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+      dport:
+      - 53
+    hqsrv-Aufgabe_9.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+      dport:
+      - 53
+    hqsrvv6-Aufgabe_8.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:ffff:0001:0000:0000:0000:0001
+      dport:
+      - 80
+      - 443
+    inetsys-Aufgabe_13.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.1.10
+      dport:
+      - 80
+      - 443
+    inetsys-Aufgabe_15.1:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 172.16.1.1
+      - 172.16.0.1
+      - 192.0.2.1
+      dport:
+      - 22
+    inetsysv6-Aufgabe_13.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0001:0000:0000:0000:0000:0010
+      dport:
+      - 80
+      - 443
+    inetsysv6-Aufgabe_15.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:0001:0000:0000:0000:0000:0001
+      - 2001:0db8:0000:0000:0000:0000:0000:0001
+      - 2001:0db8:ffff:0000:0000:0000:0000:0001
+      dport:
+      - 22
+udp:
+  hosts:
+    hqclientv6-Aufgabe_3.2:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:ffff:0001:0000:0000:0000:0001
+      dport:
+      - 53
+    hqfw-Aufgabe_20.1:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 203.0.113.1
+      dport:
+      - 53
+    hqsrvv6-Aufgabe_9.3:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:ffff:0001:0000:0000:0000:0001
+      dport:
+      - 53
+    hqsrvv6-Aufgabe_9.4:
+      ansible_host: 0.0.0.0
+      ansible_password: nws3123
+      ansible_user: toor
+      destination:
+      - 2001:0db8:ffff:0001:0000:0000:0000:0001
+      dport:
+      - 53

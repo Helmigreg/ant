@@ -1,0 +1,14 @@
+setup:
+  hosts:
+    hqfw:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      filename: nws3_nft
+      nft_file: /home/gregor/FH/ant/nws3_nft
+    hqfwv6:
+      ansible_host: 192.168.56.101
+      ansible_password: nws3123
+      ansible_user: toor
+      filename: nws3_nft
+      nft_file: /home/gregor/FH/ant/nws3_nft

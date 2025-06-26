@@ -1,0 +1,30 @@
+---
+Net:
+    brlan:
+        Netmask: 24
+        Netaddress: 192.168.0.0
+    testlan:
+        Netmask: 32
+        Netaddress: 10.0.0.0
+    ipv6add:
+        Netmask: 64
+        Netaddress: 2001:0db8:85a3:0000:0000:8a2e:037H:7334
+    ipv6add_short:
+        Netmask: 64
+        Netaddress: FE80::0202:B3FF:FE1E:832Z
+
+Machines:
+    brclient:
+        IP:
+            - 192.168.0.0
+        Management: 172.16.0.0
+        User: toor
+        Password: toor123
+    brfw:
+        IP:
+            - 192.168.0.0
+            - 10.0.0.0
+        Management: 172.16.0.2
+        User: toor
+        Password: toor123
+...

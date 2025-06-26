@@ -1,0 +1,12 @@
+tcp:
+  hosts:
+    test_machine-testcase_0:
+      ansible_host: 10.0.0.1
+      ansible_password: toor123
+      ansible_user: toor
+      dip:
+      - 192.168.0.3
+      dport:
+      - 80
+udp:
+  hosts: {}

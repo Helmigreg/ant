@@ -1,0 +1,43 @@
+---
+# Kriterium 0
+-   Name: 00
+    Source: "brclient"
+    Destination: "brfw"
+    Proto: tcp
+    S_port:
+    D_port:
+        - 443
+        - 80
+    Points: 2
+    Allow: true
+
+# Kriterium 1
+-   Name: 01
+    Source: "brfw"
+    Destination: 192.168.0.1
+    Proto: icmpv4
+    Points: 1
+    Allow: true
+
+# Kriterium 2
+-   Name: 02
+    Source: "brclient"
+    Destination: 192.168.0.0/24
+    Proto: udp
+    S_port:
+    D_port:
+        - 22
+    Points: 1
+    Allow: false
+...
+
+
+# Liste an Kriterien mit
+# Name - eindeutiger Name für den Testcase
+# Source - Name einer Machine der Testinfra.yml als String
+# Destination - Name einer Machine / eines LANs der Testinfra.yml oder eine IP-Addresse / IP Addressbereich
+# Proto - Name des Protokolls / tests (udp, tcp, icmpv4/v6, ftp, ssh...)
+# S_port - OPTIONAL Liste mit Sourceports
+# D_port - OPTIONAL Liste mit Destinationports
+# Points - Maximale Punktzahl die zu erreichen ist
+# Allow - Boolean ist das Kriterium erfüllt wenn der test erfolgreich ist

@@ -1,0 +1,6 @@
+.venv
+.lvenv
+.vscode
+__pycache__
+testfile*
+Zeit

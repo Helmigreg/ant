@@ -12,7 +12,8 @@ This tool is intended for instructors and students working on network security e
 ```bash
 git clone https://github.com/Helmigreg/ant
 cd ant
-pip install -e .
+pip install -r ant_backend/requirements
+pip install .
 ```
 
 ### Dependencies
